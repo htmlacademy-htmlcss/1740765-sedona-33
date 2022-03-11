@@ -12,7 +12,15 @@
   src: url("fonts/pt-sans-bold.woff2") format("woff2");
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -20,12 +28,49 @@ body {
   color: #000000;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.main-container {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 139px;
+  margin-left: 0;
+  margin-right: 30px;
 }
 
 .navigation-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navigation-buttons {
+  list-style: none;
+  width: 270px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.page-footer {
+  width: 1056px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  visibility: hidden;
 }
 
 .navigation-link {
@@ -34,17 +79,18 @@ body {
   line-height: 26px;
   text-align: center;
   text-decoration: none;
+  width: 270px;
 }
 
 .navigation-search {
-  background-image: url(/images/header/search.svg);
+  background-image: url(/../images/header/search.svg);
   background-repeat: no-repeat;
   width: 18px;
   height: 18px;
 }
 
 .navigation-favourites {
-  background-image: url(/images/header/favorite.svg);
+  background-image: url(/../images/header/favorite.svg);
   background-repeat: no-repeat;
 }
 
@@ -58,7 +104,7 @@ body {
 }
 
 .welcoming-part {
-  background-image: url(/images/index-background.jpg);
+  background-image: url(/../images/index-background.jpg);
   background-color: #6c879e;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -200,7 +246,7 @@ body {
 }
 
 .email-subscription {
-  background-image: url(/images/email-background.jpg);
+  background-image: url(/../images/email-background.jpg);
   background-color: #496d82;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -246,21 +292,21 @@ body {
 }
 
 .twitter {
-  background-image: url(/images/socials/twitter.svg);
+  background-image: url(/../images/socials/twitter.svg);
   background-repeat: no-repeat;
   width: 18px;
   height: 15px;
 }
 
 .facebook {
-  background-image: url(/images/socials/facebook.svg);
+  background-image: url(/../images/socials/facebook.svg);
   background-repeat: no-repeat;
   width: 10px;
   height: 18px;
 }
 
 .youtube {
-  background-image: url(/images/socials/youtube.svg);
+  background-image: url(/../images/socials/youtube.svg);
   background-repeat: no-repeat;
   width: 20px;
   height: 16px;
@@ -277,7 +323,7 @@ body {
 /* catalog */
 
 .inner-header {
-  background-image: url(/images/catalog-background.jpg);
+  background-image: url(/../images/catalog-background.jpg);
   background-color: #4b6075;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -294,7 +340,7 @@ body {
 }
 
 .breadcrumbs-link-home {
-  background-image: url(/images/breadcrumbs-home.svg);
+  background-image: url(/../images/breadcrumbs-home.svg);
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
@@ -355,21 +401,21 @@ body {
 }
 
 .show-as-tiles {
-  background-image: url(/images/mode-tile.svg);
+  background-image: url(/../images/mode-tile.svg);
   background-repeat: no-repeat;
   width: 16px;
   height: 14px;
 }
 
 .show-as-slideshow {
-  background-image: url(/images/mode-slideshow.svg);
+  background-image: url(/../images/mode-slideshow.svg);
   background-repeat: no-repeat;
   width: 16px;
   height: 14px;
 }
 
 .show-as-list {
-  background-image: url(/images/mode-list.svg);
+  background-image: url(/../images/mode-list.svg);
   background-repeat: no-repeat;
   width: 16px;
   height: 14px;
@@ -458,21 +504,21 @@ body {
 }
 
 .three-stars {
-  background-image: url(/images/star.svg);
+  background-image: url(/../images/star.svg);
   background-repeat: repeat-x;
   width: 54px;
   height: 17px;
 }
 
 .four-stars {
-  background-image: url(/images/star.svg);
+  background-image: url(/../images/star.svg);
   background-repeat: repeat-x;
   width: 72px;
   height: 17px;
 }
 
 .two-stars {
-  background-image: url(/images/star.svg);
+  background-image: url(/../images/star.svg);
   background-repeat: repeat-x;
   width: 36px;
   height: 17px;
