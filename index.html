@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
+
 <body>
   <header class="page-header">
     <nav class="main-navigation">
@@ -27,18 +28,18 @@
       </ul>
 
       <ul class="navigation-buttons">
-        <li class="navigation-item">
-          <a class="navigation-link navigation-search" href="#">
+        <li class="navigation-buttons-item">
+          <a class="navigation-button navigation-search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link navigation-favourites" href="#">
+        <li class="navigation-buttons-item">
+          <a class="navigation-button navigation-favourites" href="#">
             <span class="visually-hidden">Избранное</span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link navigation-go-button" href="#">Хочу сюда!</a>
+        <li class="navigation-buttons-item">
+          <a class="navigation-go-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -48,6 +49,7 @@
     <div class="welcoming-part">
       <h1 class="visually-hidden">Город Седона</h1>
       <img class="welcoming-title" alt="Приветственная надпись" src="../images/welcome.svg" width="458" height="352">
+      <div class="divider"></div>
     </div>
 
     <section class="advantages">
@@ -57,8 +59,10 @@
       <p class="description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 
       <div class="illustrated-advantage">
+          <div class="illustrated-advantage-tile">
         <h3 class="advantage-title-white">
-          Настоящий городок
+          Настоящий<br>
+          городок
         </h3>
         <p class="advantage-number-white">— №1 —</p>
         <p class="advantage-desc-white">
@@ -66,6 +70,7 @@
           для туристов, там течёт<br>
           своя жизнь
         </p>
+          </div>
         <img class="city-picture" src="../images/town.jpg" alt="Городской пейзаж Седоны" width="800" height="384">
       </div>
 
@@ -105,6 +110,8 @@
       </section>
 
       <div class="illustrated-advantage">
+        <img class="bridge-picture" src="../images/devils-bridge.jpg" alt="Мост дьявола" width="800" height="384">
+        <div class="illustrated-advantage-tile">
         <h3 class="advantage-title-white">
           Там есть мост дьявола
         </h3>
@@ -114,13 +121,14 @@
           Если вы осмелитесь,<br>
           разумеется
         </p>
-        <img class="bridge-picture" src="../images/devils-bridge.jpg" alt="Мост дьявола" width="800" height="384">
+        </div>
       </div>
 
       <ul class="advantages-list">
         <li class="advantage blue-tile">
           <h3 class="advantage-title">
-            Небольшая площадь
+            Небольшая<br>
+            площадь
           </h3>
           <p class="advantage-number">— №3 —</p>
           <p class="advantage-desc">
@@ -131,7 +139,8 @@
 
         <li class="advantage deepblue-tile">
           <h3 class="advantage-title">
-            Красивая дорога
+            Красивая<br>
+            дорога
           </h3>
           <p class="advantage-number">— №4 —</p>
           <p class="advantage-desc">
@@ -142,7 +151,8 @@
 
         <li class="advantage blue-tile">
           <h3 class="advantage-title">
-            Мало туристов
+            Мало<br>
+            туристов
           </h3>
           <p class="advantage-number">— №5 —</p>
           <p class="advantage-desc">
@@ -155,7 +165,7 @@
 
     <section class="find-hotel">
       <h2 class="visually-hidden">Предложения</h2>
-      <p class="title-text">
+      <p class="find-hotel-title">
         Заинтересовались?
       </p>
       <p class="find-hotel-desc">
@@ -218,6 +228,6 @@
         height="34">
     </a>
   </footer>
-
 </body>
+
 </html>
