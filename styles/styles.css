@@ -170,6 +170,226 @@ body {
   fill: rgba(117, 98, 87, 0.3);
 }
 
+.control-input[type="checkbox"]:checked + .checkmark::before,
+.control-input[type="checkbox"]:checked + .checkmark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background-image: url(../images/checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.control-input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.control:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:active input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.checkmark:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.checkmark-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.control-input-radio[type="radio"]:checked + .checkmark-radio::before,
+.control-input-radio[type="radio"]:checked + .checkmark-radio::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/radio-ellipse.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.control-input-radio[type="radio"]:checked + .checkmark-radio:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.control-input-radio[type="radio"]:not(:checked) + .checkmark-radio:focus {
+  box-shadow: 0 0 0 3px #83B3D3 inset;
+  outline: none;
+}
+
+.range-wrapper-inputs:focus-within {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus {
+  outline: none;
+}
+
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: 0 0 0 3px #83B3D3, 0px 4px 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.range-toggle:active {
+  box-shadow: 0 0 0 2px #83B3D3;
+  outline: none;
+}
+
+.button-apply:hover {
+  background-color: #68A2CA;
+}
+
+.button-apply:focus {
+  box-shadow: 0 0 0 3px #FFFFFF;
+  outline: none;
+}
+
+.button-reset:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+  border-radius: 4px;
+  width: 100px;
+  display: inline-block;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.button-apply:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.sort-by-dropdown:hover {
+  border-color: #83B3D3;
+}
+
+.sort-by-dropdown:focus {
+  border-color: #83B3D3;
+  outline: none;
+}
+
+.sort-by-dropdown:active {
+  background-color: tomato;
+  transition-duration: 2s;
+}
+
+.show-as:hover {
+  border-color: #83B3D3;
+}
+
+.show-as:focus {
+  border-color: #83B3D3;
+  outline: none;
+}
+
+.show-as:target {
+  border-color: #000000;
+  outline: none;
+}
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-image:hover {
+  opacity: 0.6;
+}
+
+.hotel-image:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.hotel-image:active {
+  opacity: 0.3;
+}
+
+.hotel-info:hover {
+  background: #615048;
+}
+
+.hotel-info:focus {
+  background: #615048;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.hotel-info:active {
+  color: rgba(255, 255, 255, .3)
+}
+
+.add-to-favourites:focus {
+  background: #68A2CA;
+  box-shadow: 0 0 0 3px #615048;
+  outline: none;
+}
+
+.add-to-favourites:hover {
+  background: #68A2CA;
+  box-shadow: 0 0 0 1px #615048 inset;
+  outline: none;
+}
+
+.add-to-favourites:active {
+  background: #68A2CA;
+  box-shadow: 0 0 0 1px #615048 inset;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.added-to-favourites:hover {
+  background-color: #6C9E42;
+}
+
+.added-to-favourites:focus {
+  background-color: #6C9E42;
+  box-shadow: 0 0 0 3px #615048;
+  outline: none;
+}
+
+.added-to-favourites:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .navigation-logo {
   width: 139px;
   height: 70px;
@@ -1033,46 +1253,6 @@ body {
   width: 20px;
   background-color: #FFFFFF;
   border-radius: 4px;
-}
-
-.control-input[type="checkbox"]:checked + .checkmark::before,
-.control-input[type="checkbox"]:checked + .checkmark::after {
-  position: absolute;
-  top: 5px;
-  left: 4px;
-  width: 12px;
-  height: 10px;
-  background-image: url(../images/checked.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  content: "";
-}
-
-.control-input[type="checkbox"]:focus {
-  box-shadow: 0 0 0 3px #83B3D3;
-  outline: none;;
-}
-
-.control:hover input ~ .checkmark {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.checkmark:focus {
-  box-shadow: 0 0 0 3px #83B3D3;
-  outline: none;
-}
-
-.checkmark-radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  background-image: url(../images/radio-button-checked.svg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .button-apply {
