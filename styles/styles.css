@@ -53,16 +53,16 @@ body {
   color: #756257;
 }
 
-.navigation-search:hover {
-  filter: invert(41%) sepia(2%) saturate(6584%) hue-rotate(337deg) brightness(81%) contrast(62%);
-  -webkit-mask-image: url(../images/header/search.svg) no-repeat 50% 50%;
-  mask: url(../images/header/search.svg) no-repeat 50% 50%;
+.navigation-link:active {
+  opacity: 0.5;
 }
 
-.navigation-favourites:hover {
-  filter: invert(41%) sepia(2%) saturate(6584%) hue-rotate(337deg) brightness(81%) contrast(62%);
-  -webkit-mask-image: url(../images/header/favorite.svg) no-repeat 50% 50%;
-  mask: url(../images/header/favorite.svg) no-repeat 50% 50%;
+.navigation-button:hover {
+  fill: #756257;
+}
+
+.navigation-button:active {
+  fill: rgba(117, 98, 87, 0.3)
 }
 
 .navigation-go-button:hover{
@@ -70,10 +70,104 @@ body {
 }
 
 .navigation-go-button:focus{
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.navigation-go-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.find-hotel-link:hover {
   background-color: #615048;
-  border: 3px solid #83B3D3;
-  box-sizing: border-box;
-  width: 160px;
+}
+
+.find-hotel-link:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.find-hotel-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.field:hover {
+  background-color: #E6E6E6;
+}
+
+.field:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.field:not(:placeholder-shown):invalid {
+  box-shadow: 0 0 0 2px #FF5757 inset;
+  outline: none;
+}
+
+.subscription-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscription-button:focus {
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.subscription-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social-button:hover {
+  fill: #68A2CA;
+}
+
+.social-button:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+  border-radius: 10px;
+}
+
+.social-button:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.contacts-address-phone:hover {
+  color: #756257;
+}
+
+.contacts-address-phone:focus {
+  outline: none;
+}
+
+.contacts-address-phone:active {
+  color: rgba(117, 98, 87, 0.3);
+}
+
+.phone-focus:focus {
+  height: 70px;
+  width: 361px;
+  box-shadow: 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+}
+
+.made-by:hover {
+  fill: #756257;
+}
+
+.made-by:focus {
+  display: flex;
+  margin-bottom: 37px;
+  align-items: center;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+  border-radius: 10px;
+  fill: #756257;
+}
+
+.made-by:active {
+  fill: rgba(117, 98, 87, 0.3);
 }
 
 .navigation-logo {
@@ -124,20 +218,60 @@ body {
 
 .favourites-number {
   background-color: #7DB54F;
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  display: flex;
   padding: 3px 5px 4px 5px;
   border-radius: 50%;
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
   color: #FFFFFF;
-  margin-left: 26px;
-  margin-bottom: 15px;
+  margin-left: 12px;
+  margin-top: -30px;
 }
 
 .navigation-selected-main::after {
   width: 68px;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  flex-direction: row;
+  height: 27px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link:focus {
+  display: flex;
+  position: relative;
+  margin-left: -8px;
+  margin-right: 3px;
+  justify-content: center;
+  height: 27px;
+  padding: 0 8px;
+  align-items: center;
+  box-shadow: 0 0 0 3px #83B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+
+.breadcrumbs-last-item:focus {
+  display: flex;
+  margin-left: 4px;
+  padding: 0 6px;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 .navigation-buttons {
@@ -150,23 +284,20 @@ body {
 }
 
 .navigation-button {
-  display: flex;
+  display: block;
   padding: 24px 12px;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .navigation-search {
-  background-image: url(../images/header/search.svg);
-  background-repeat: no-repeat;
   width: 18px;
   height: 18px;
   background-position: center;
 }
 
 .navigation-favourites {
-  /* background-image: url(../images/header/favorite.svg); */
-  background-repeat: no-repeat;
   width: 18px;
   height: 18px;
   background-position: center;
@@ -528,6 +659,7 @@ body {
 
 .field {
   font-family: "PT-Sans", sans-serif;
+  background-color: #F2F2F2;
   font-size: 18px;
   line-height: 26px;
   width: 600px;
@@ -583,46 +715,38 @@ body {
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
-  width: 107px;
-  height: 18px;
-  margin: 49px 0 53px 72px;
+  width: 128px;
+  height: 40px;
+  margin: 49px 0 53px 63px;
   align-items: center;
 }
 
 .social-links-item {
   display: inline-block;
-  height: 18px;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  margin-right: 3px;
+  margin-bottom: 23px;
+}
+
+.social-button {
+  fill: #83B3D3;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
   align-items: center;
 }
 
-.twitter {
+/* .twitter {
   width: 18px;
   height: 15px;
   background-image: url(../images/socials/twitter.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
-}
-
-.facebook {
-  background-image: url(../images/socials/facebook.svg);
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 18px;
-  background-position: center;
-  display: inline-block;
-  margin-left: 29px;
-}
-
-.youtube {
-  background-image: url(../images/socials/youtube.svg);
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 16px;
-  background-position: center;
-  display: inline-block;
-  margin-left: 30px;
-}
+} */
 
 .footer-contacts {
   margin-left: auto;
@@ -632,20 +756,28 @@ body {
 .contacts-address-phone {
   font-family: "PT-Sans", sans-serif;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 70px;
   color: #000000;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   text-align: center;
-  width: 720px;
-  margin: 37px auto;
+  width: 361px;
+  height: 70px;
   font-style: normal;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-left: 30px;
+  justify-content: center;
 }
 
 .made-by {
-  display: inline-block;
+  display: flex;
   align-self: center;
-  margin-right: 72px;
+  margin-right: 50px;
+  margin-top: 28px;
+  width: 160px;
+  height: 70px;
+  justify-content: center;
 }
 
 /* catalog */
@@ -684,25 +816,38 @@ body {
   align-items: center;
 }
 
-.breadcrumbs-link-home {
-  background-image: url(../images/breadcrumbs-home.svg);
-  background-repeat: no-repeat;
+.breadcrumbs-home {
   width: 12px;
   height: 12px;
   display: inline-block;
   margin-right: 11px;
+  fill: #FFFFFF;
 }
 
 .breadcrumbs-link {
+  display: flex;
+  height: 27px;
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
   text-decoration: none;
+  align-items: center;
 }
 
-.breadcrumbs-last-item::before {
+.breadcrumbs-arrow {
+  fill: rgba(255, 255, 255, 0.3);
+  margin-left: 2px;
+}
+
+.breadcrumbs-last-item {
+  display: flex;
+  margin-left: 10px;
+}
+
+
+/* .breadcrumbs-last-item:before {
   content: "";
-  display: inline-block;
+  display: flex;
   float: left;
   position: relative;
   background-image: url(../images/breadcrumbs-arrow.svg);
@@ -712,10 +857,14 @@ body {
   width: 6px;
   margin-top: 7px;
   opacity: 0.3;
-}
+} */
 
-.breadcrumbs-last-item {
-  margin-left: 10px;
+.before-arrow {
+  fill: #FFFFFF;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .catalog-filter {
@@ -868,14 +1017,6 @@ body {
   padding-left: 39px;
 }
 
-.control input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
 .control-input-radio input {
   position: absolute;
   opacity: 0;
@@ -892,9 +1033,33 @@ body {
   width: 20px;
   background-color: #FFFFFF;
   border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .checkmark::before,
+.control-input[type="checkbox"]:checked + .checkmark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
   background-image: url(../images/checked.svg);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.control-input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;;
+}
+
+.control:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.checkmark:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
 }
 
 .checkmark-radio {
@@ -1336,6 +1501,7 @@ body {
 }
 
 .modal-container {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
