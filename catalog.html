@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-  <body>
-    <div class="primary-container">
+<body>
+  <div class="primary-container">
     <header class="page-header">
       <nav class="main-navigation">
         <a class="navigation-logo" href="index.html">
@@ -213,6 +213,7 @@
         </ul>
       </div>
 
+      <h2 class="visually-hidden">Отели</h2>
       <ul class="hotels-list">
         <li class="hotel-list-item">
           <article class="hotel-card">
@@ -458,47 +459,56 @@
                 <label class="search-form-label">Взрослые:</label>
                 <button class="number-of-people-decrease adults-number-decrease" type="button">
                   <svg class="minus" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black" />
+                    <path d="M0 0L0 1L13 1V0L0 0Z" fill="black" />
                   </svg>
                 </button>
                 <input class="number-of-people-button" type="number" value="2" name="number-of-adults">
                 <button class="number-of-people-increase adults-number-increase" type="button">
                   <svg class="plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black" />
-                </svg>
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black" />
+                  </svg>
                 </button>
               </div>
 
               <div class="childen">
-                <label class="search-form-label label-children">Дети:
-                  <input class="right-number" type="number" value="1" name="number-of-children">
-                </label>
-                <svg class="info" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                <span class="form-label">
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.5" cy="12.5" r="12.5" />
+                        <g clip-path="url(#clip0_38694_274)">
+                          <path d="M12 17H13V11H12V17Z" fill="white" />
+                          <path d="M13 8H12V9H13V8Z" fill="white" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_38694_274">
+                            <rect width="1" height="9" fill="white" transform="translate(12 8)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые
+                      будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                  <label class="search-form-label label-children">Дети:
+                    <input class="right-number" type="number" value="1" name="number-of-children">
+                  </label>
+                </span>
+
+                <button class="number-of-people-decrease children-number-decrease" type="button">
+                  <svg class="minus" width="13" height="1" viewBox="0 0 13 1" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12.5" cy="12.5" r="12.5" fill="#83B3D3" />
-                    <g clip-path="url(#clip0_38694_274)">
-                      <path d="M12 17H13V11H12V17Z" fill="white" />
-                      <path d="M13 8H12V9H13V8Z" fill="white" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_38694_274">
-                        <rect width="1" height="9" fill="white" transform="translate(12 8)" />
-                      </clipPath>
-                    </defs>
+                    <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black" />
                   </svg>
-                  <button class="number-of-people-decrease children-number-decrease" type="button">
-                    <svg class="minus" width="13" height="1" viewBox="0 0 13 1" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black" />
-                    </svg>
-                  </button>
-                  <button class="number-of-people-increase children-number-increase" type="button">
-                    <svg class="plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black" />
+                </button>
+                <button class="number-of-people-increase children-number-increase" type="button">
+                  <svg class="plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black" />
                   </svg>
-                  </button>
+                </button>
               </div>
             </div>
             <button class="search-submit" type="submit">Найти</button>
@@ -506,7 +516,7 @@
         </section>
       </div>
     </div>
-</div>
+  </div>
 </body>
 
 </html>
