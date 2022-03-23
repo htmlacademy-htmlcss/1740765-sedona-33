@@ -1129,7 +1129,7 @@ body {
 .range-wrapper-inputs {
   display: flex;
   flex-direction: row;
-  box-sizing: 287px;
+  width: 287px;
   box-sizing: border-box;
   height: 48px;
   justify-content: start;
@@ -1187,11 +1187,11 @@ body {
 }
 
 .from-to-left {
-  left: 1070px;
+  left: 750px;
 }
 
 .from-to-right {
-  left: 1210px;
+  left: 890px;
 }
 
 .catalog-filter-label {
