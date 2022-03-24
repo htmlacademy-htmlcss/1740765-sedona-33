@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Гостиницы Седоны</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
@@ -84,23 +85,23 @@
             <ul class="catalog-filters-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input visually-hidden" tabindex="-1" type="checkbox" name="pool" checked>
+                  <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
                   Бассейн
-                  <span class="checkmark" tabindex="0"></span>
+                  <span class="checkmark"></span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input visually-hidden" tabindex="-1" type="checkbox" name="parking" checked>
+                  <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
                   Парковка
-                  <span class="checkmark" tabindex="0"></span>
+                  <span class="checkmark"></span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input visually-hidden" tabindex="-1" type="checkbox" name="wi-fi">
+                  <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
                   Wi-Fi
-                  <span class="checkmark" tabindex="0"></span>
+                  <span class="checkmark"></span>
                 </label>
               </li>
             </ul>
@@ -112,26 +113,26 @@
             <ul class="catalog-filters-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input-radio visually-hidden" tabindex="-1" type="radio"
-                    name="type-of-accommodation" value="hotel" checked>
+                  <input class="control-input-radio visually-hidden" type="radio" name="type-of-accommodation"
+                    value="hotel" checked>
                   Гостиница
-                  <span class="checkmark-radio" tabindex="0"></span>
+                  <span class="checkmark-radio"></span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input-radio visually-hidden" tabindex="-1" type="radio"
-                    name="type-of-accommodation" value="motel">
+                  <input class="control-input-radio visually-hidden" type="radio" name="type-of-accommodation"
+                    value="motel">
                   Мотель
-                  <span class="checkmark-radio" tabindex="0"></span>
+                  <span class="checkmark-radio"></span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input-radio visually-hidden" tabindex="-1" type="radio"
-                    name="type-of-accommodation" value="apartmenst">
+                  <input class="control-input-radio visually-hidden" type="radio" name="type-of-accommodation"
+                    value="apartmenst">
                   Апартаменты
-                  <span class="checkmark-radio" tabindex="0"></span>
+                  <span class="checkmark-radio"></span>
                 </label>
               </li>
             </ul>
@@ -371,7 +372,8 @@
           честное бойскаутское!
         </p>
         <form class="email-subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field field-inner" placeholder="Ваш e-mail" type="email" name="email" required>
+          <label class="visually-hidden" for="subscribe">Подписаться</label>
+          <input class="field field-inner" id="subscribe" placeholder="Ваш e-mail" type="email" name="email" required>
           <button class="button subscription-button" type="submit">
             <span class="subscription-button">Подписаться</span>
           </button>
